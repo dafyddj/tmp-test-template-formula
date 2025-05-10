@@ -13,7 +13,7 @@
   ],
   packageRules: [
     {
-      groupName: 'GitLab CI Docker images',
+      groupName: 'GitLab CI Docker non-major images',
       matchManagers: [
         'gitlabci',
       ],
