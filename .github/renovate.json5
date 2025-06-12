@@ -7,7 +7,7 @@
   ],
   extends: [
     'github>saltstack-formulas/.github',
-    'github>dafyddj/.github:groupManager(pre-commit,hooks)',
+    'github>dafyddj/my-ssf.github:groupManager(pre-commit,hooks)',
     ':enablePreCommit',
   ],
   schedule: [
