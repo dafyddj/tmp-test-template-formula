@@ -97,11 +97,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - name: Debug on runner (When re-run with "Enable debug logging" checked)
-        if: runner.debug
-        uses: mxschmitt/action-tmate@7b6a61a73bbb9793cb80ad69b8dd8ac19261834c # v3.22
-        with:
-          detached: true
+      - run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       # yamllint disable-line rule:line-length
       - uses: poseidon/wait-for-status-checks@899c768d191b56eef585c18f8558da19e1f3e707 # v0.6.0
@@ -122,5 +119,5 @@ jobs:
           maintainer contributor
       - name: Run `semantic-release`
         run: |
-          semantic-release
+          semantic-release --dry-run
       - run: echo "::notice ::Workflow success!"
