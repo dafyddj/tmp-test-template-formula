@@ -46,6 +46,7 @@ jobs:
           restore-keys: |
             ${{ env.CI_CACHE_ID }}|
       - name: Build cache
+        shell: bash
         run: |
           pre-commit gc
           time pre-commit install-hooks
