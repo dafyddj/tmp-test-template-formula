@@ -49,6 +49,7 @@ jobs:
         shell: bash
         run: |
           pre-commit gc
+          echo "Installing hook environments"
           time pre-commit install-hooks
       - name: Run `pre-commit`
         run: |
