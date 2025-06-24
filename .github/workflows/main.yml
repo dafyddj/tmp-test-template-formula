@@ -41,6 +41,8 @@ jobs:
           path: ~/.cache/pre-commit
           key: "${{ env.CI_CACHE_ID }}|\
                 ${{ hashFiles('.pre-commit-config.yaml') }}"
+          restore-keys: |
+            ${{ env.CI_CACHE_ID }}|
       - name: Run `pre-commit`
         run: |
           git config --global --add safe.directory $(pwd)
