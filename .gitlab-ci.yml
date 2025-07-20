@@ -279,6 +279,6 @@ semantic-release:
     MAINTAINER_TOKEN: '${GH_TOKEN}'
   script:
     # Update `AUTHORS.md`
-    - '${HOME}/go/bin/maintainer contributor'
+    - 'maintainer contributor --ignore-contributors semantic-release-bot,renovate[bot]'
     # Run `semantic-release`
     - 'semantic-release'
