@@ -278,7 +278,5 @@ semantic-release:
   variables:
     MAINTAINER_TOKEN: '${GH_TOKEN}'
   script:
-    # Update `AUTHORS.md`
-    - 'maintainer contributor --ignore-contributors semantic-release-bot,renovate[bot]'
     # Run `semantic-release`
     - 'semantic-release'
