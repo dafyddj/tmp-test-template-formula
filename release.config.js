@@ -1,5 +1,4 @@
 module.exports = {
-  repositoryUrl: 'https://github.com/saltstack-formulas/template-formula',
   plugins: [
     ['@semantic-release/commit-analyzer', {
       preset: 'angular',
