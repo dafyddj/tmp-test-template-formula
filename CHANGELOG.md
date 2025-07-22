@@ -1,5 +1,131 @@
 # Changelog
 
+# 1.0.0 (2025-07-22)
+
+
+### Bug Fixes
+
+* **_mapdata:** ensure map data is directly under `values` ([bcb8e29](https://github.com/dafyddj/tmp-test-template-formula/commit/bcb8e29b687f9804a1cfbda1253da290432cd5b0))
+* **`config/file`:** add missing space before Jinja `}}` ([5cd08ab](https://github.com/dafyddj/tmp-test-template-formula/commit/5cd08abef2e2b2669fe0c3df706971608fe48721))
+* **`libtofs`:** use `select` to deal with empty strings in path ([afe0751](https://github.com/dafyddj/tmp-test-template-formula/commit/afe075141f561d0b1e1edf2d2f27dcb2c9cabc7e))
+* **`libtofs`:** use `strip` to deal with leading/trailing slashes ([2563a46](https://github.com/dafyddj/tmp-test-template-formula/commit/2563a46d5be9cea69cd0e9cc6f627b82d70f9d45))
+* **`map.jinja`:** _merge_ defaults and `config.get` ([91bc2f0](https://github.com/dafyddj/tmp-test-template-formula/commit/91bc2f046b3629b9f1f66ed0eacddb626348da6c))
+* **`map.jinja`:** remove `merge` from `config.get` (for `salt-ssh`) ([00e474c](https://github.com/dafyddj/tmp-test-template-formula/commit/00e474cdc25c0bc8502826336138cdec9d0c71f5)), closes [#95](https://github.com/dafyddj/tmp-test-template-formula/issues/95)
+* **`map.jinja`:** use tplroot ([b9c5e03](https://github.com/dafyddj/tmp-test-template-formula/commit/b9c5e030bc5fe4f903f5fbd994966331523fc405))
+* broken install-hooks due to saltlint v0.8.0 ([7da11c9](https://github.com/dafyddj/tmp-test-template-formula/commit/7da11c9c3ace8efc379cdec804420ca810e43548))
+* **codeowners:** ensure `lib*` files are owned by `ssf` ([d60cc15](https://github.com/dafyddj/tmp-test-template-formula/commit/d60cc1536637831ef76b2f2c84086b3f88f2684f))
+* **comments:** explain that at least an empty dict is required ([426f955](https://github.com/dafyddj/tmp-test-template-formula/commit/426f955a791053c7eae1cd3b3fe5c87f84689181)), closes [#93](https://github.com/dafyddj/tmp-test-template-formula/issues/93)
+* **commitlint:** fix header length at 72 chars as agreed ([a95061d](https://github.com/dafyddj/tmp-test-template-formula/commit/a95061ddd088210c5111490234bc1588002cddd5))
+* **convert-formula.sh:** add -_ to allowed chars in formula name ([a999fee](https://github.com/dafyddj/tmp-test-template-formula/commit/a999fee2145d9b0484049808c3c331943580cc3f))
+* **convert-formula.sh:** add `~` to reST underlining during conversion ([80ed8cd](https://github.com/dafyddj/tmp-test-template-formula/commit/80ed8cd4153f99ec0acaac2996387f565981e7aa))
+* **convert-formula.sh:** apply remaining suggestions from [#180](https://github.com/dafyddj/tmp-test-template-formula/issues/180) ([76ecd44](https://github.com/dafyddj/tmp-test-template-formula/commit/76ecd447be66fd9b33ace56836796d3ce24537db))
+* **convert-formula.sh:** delete all existing tags ([7c33601](https://github.com/dafyddj/tmp-test-template-formula/commit/7c33601fd455df90b1082791cdd282a507334898)), closes [#210](https://github.com/dafyddj/tmp-test-template-formula/issues/210)
+* **convert-formula.sh:** fix reST underlining during conversion ([11068af](https://github.com/dafyddj/tmp-test-template-formula/commit/11068afae9a3b6957695b79f92b4588388a13632))
+* **convert-formula.sh:** remove "Using this template" post-conversion ([55ab937](https://github.com/dafyddj/tmp-test-template-formula/commit/55ab937c047374fce0548d8c18e8513bc15ead78))
+* **convert-formula.sh:** remove `rubocop` override post-conversion ([aca4e44](https://github.com/dafyddj/tmp-test-template-formula/commit/aca4e4428964da745e7b1b7dce15d2c751f76490))
+* **convert-formula.sh:** remove CI test post-conversion ([06ec949](https://github.com/dafyddj/tmp-test-template-formula/commit/06ec949fd17bb4b52bb230a6ad2eddfe08a4e693))
+* **convert-formula.sh:** replace instances of `template-formula` for CI ([537fe65](https://github.com/dafyddj/tmp-test-template-formula/commit/537fe65d456741e64823af33865f34457e0e3853)), closes [#231](https://github.com/dafyddj/tmp-test-template-formula/issues/231)
+* **convert-formula.sh:** reset version to `1.0.0` ([39889ce](https://github.com/dafyddj/tmp-test-template-formula/commit/39889ce303cb57125ba0411ab55266ee018d40e1))
+* **convert-formula.sh:** use portable sed function to make replacements ([41e10b5](https://github.com/dafyddj/tmp-test-template-formula/commit/41e10b5249e0c8827844f438d1995cf7cb42d63a)), closes [#192](https://github.com/dafyddj/tmp-test-template-formula/issues/192)
+* **convert-formula:** `_mapdata` control name must use the formula one ([1f3600d](https://github.com/dafyddj/tmp-test-template-formula/commit/1f3600d66fd710bd1a41cb937cb345369d0e3e18))
+* fix `CentOS Linux-7` and add `os` details from current CI setup ([4be16ca](https://github.com/dafyddj/tmp-test-template-formula/commit/4be16ca4befeddeeb8be1199cd088df7c547523f))
+* **formula:** update to current oldest supported version of Salt ([878eca1](https://github.com/dafyddj/tmp-test-template-formula/commit/878eca189b79dfb35fe7c95ea95cf532644edc68))
+* **gitignore:** add Gemfile.lock to .gitignore ([87fa410](https://github.com/dafyddj/tmp-test-template-formula/commit/87fa4100a5e27bb11242c50338f1d7cb26713eef))
+* **grain:** fix grain value ([26edfa0](https://github.com/dafyddj/tmp-test-template-formula/commit/26edfa08c6bc2791eb8375a1db70b9f76ff4e3a2))
+* **inspec:** validate `map.jinja` configuration ([41d222e](https://github.com/dafyddj/tmp-test-template-formula/commit/41d222e30c0da10fabeea23a7ab2886f02ea6479))
+* **libmapstack:** allow mapping by booleans and numbers ([bb3a7ea](https://github.com/dafyddj/tmp-test-template-formula/commit/bb3a7ea0b208eeb2b6472ca9cb011935032c0356))
+* **libsaltcli+libmatchers:** ensure Salt client API detection [skip ci] ([6eb2073](https://github.com/dafyddj/tmp-test-template-formula/commit/6eb2073d02ff8006dac86c59e683ae983ecccd25))
+* **libsaltcli:** update `salt-ssh` detection for `enable_ssh_minions` ([f0e7192](https://github.com/dafyddj/tmp-test-template-formula/commit/f0e7192fb5a546cb0569f9d4257807c8592a00b6))
+* **libtofs:** “files_switch” mess up the variable defined by “map.jinja” ([ab4ce75](https://github.com/dafyddj/tmp-test-template-formula/commit/ab4ce751a4640303af7acbf7a278aef79b530bb6))
+* **libtofs:** “files_switch” mess up the variable exported by “map.jinja” [skip ci] ([241646f](https://github.com/dafyddj/tmp-test-template-formula/commit/241646fe96447369df00f17ec1c27a53de08bec4))
+* **libtofs:** avoid using subpath by default ([c07471d](https://github.com/dafyddj/tmp-test-template-formula/commit/c07471da124a6445bf0fd0377606b9a937109e79))
+* **libtofs:** don't crash if “tofs.files_switch” lookup a list ([0979d35](https://github.com/dafyddj/tmp-test-template-formula/commit/0979d359fd1da219b32e4d2f8937336f2f061784))
+* **pillar:** fix `os_family` typo ([3f89c12](https://github.com/dafyddj/tmp-test-template-formula/commit/3f89c1224896453f541f7334c0258130d12bb787))
+* **release.config.js:** use full commit hash in commit link [skip ci] ([4ac8d92](https://github.com/dafyddj/tmp-test-template-formula/commit/4ac8d92778977ed63fe99e4506a2b0a2d41a2bce))
+* **rubocop:** add fixes using `rubocop --safe-auto-correct` ([484ce24](https://github.com/dafyddj/tmp-test-template-formula/commit/484ce2459dd0a598954fc0ee2656685f134f757d))
+* **rubocop:** fix remaining errors manually ([9566b6f](https://github.com/dafyddj/tmp-test-template-formula/commit/9566b6fb6317132345a9a2f2320201d2f30128ac))
+* **running.sls:** use `watch` not `require` to ensure service restart ([3a1fc35](https://github.com/dafyddj/tmp-test-template-formula/commit/3a1fc35a13f66714cd42583f13679c6f189ae48f))
+* **subcomponent:** clean referencing wrong sls ([394808e](https://github.com/dafyddj/tmp-test-template-formula/commit/394808ebda03a8981af131061bdfd99a296a83c4))
+* **suse:** correct OS grain ([6aee580](https://github.com/dafyddj/tmp-test-template-formula/commit/6aee5804d3d4282322c6421befefa7b803eca699))
+* **tofs:** prepend the config-based `source_files` to the default ([3483e76](https://github.com/dafyddj/tmp-test-template-formula/commit/3483e760bff6bef763aedaf9e4c7bcec8aa6bfc1)), closes [#151](https://github.com/dafyddj/tmp-test-template-formula/issues/151)
+* **tofs:** update comments in `files_switch` macro for new method ([3fa3640](https://github.com/dafyddj/tmp-test-template-formula/commit/3fa36402b79daf56e85def96dc4170f8f99c8596))
+* **tofs:** update use of state ID in `config` and `pillar` ([3d9a24c](https://github.com/dafyddj/tmp-test-template-formula/commit/3d9a24c71dc2cae3dd33fd07c68660128cd5c4f4))
+* **tofs:** use `source_files` instead of `files` ([5110716](https://github.com/dafyddj/tmp-test-template-formula/commit/51107165f07b7de4fa6aa297e7f0546e2c8de598))
+* **tofs:** use `tpldir` derivative `topdir` for pillar (config) paths ([5e9df00](https://github.com/dafyddj/tmp-test-template-formula/commit/5e9df004d97fde7adb98550f0dcf8f2807d60b67))
+* **travis:** don't install gems twice ([925d8e2](https://github.com/dafyddj/tmp-test-template-formula/commit/925d8e2dc80ba1d69b337bddea13e1611e8761c7))
+* **travis:** reinstate conversion test [skip ci] ([5d47fda](https://github.com/dafyddj/tmp-test-template-formula/commit/5d47fda1b9f52bff1a4c2cad5097cd3d8cd43521))
+* **travis:** use version numbers in Gemfile to prevent failed builds ([35f7111](https://github.com/dafyddj/tmp-test-template-formula/commit/35f71113cf26e97fd4717ad96f75b63fcd170923))
+* typo in the installation instructions ([306a0d9](https://github.com/dafyddj/tmp-test-template-formula/commit/306a0d9b1e209012fb7630d1e1cbfe5ea661a0f6))
+
+
+### Code Refactoring
+
+* improve reusability using an unique keyword TEMPLATE ([2e8ded6](https://github.com/dafyddj/tmp-test-template-formula/commit/2e8ded6565f7bad166323792bf42979aac2980fa))
+* **pkg:** change to `package` instead ([2cd82e5](https://github.com/dafyddj/tmp-test-template-formula/commit/2cd82e5076353d63b74cb8b655cd9799ff4ecd9e))
+* **pkgname:** reserve 'pkg' as packaging dict ([c6ae81c](https://github.com/dafyddj/tmp-test-template-formula/commit/c6ae81cc65b293744856309d23f51d085cbe069b))
+* **states:** set state IDs based on a dependable structure ([6690ee6](https://github.com/dafyddj/tmp-test-template-formula/commit/6690ee6591697389dfe81e280bc8f85ad3ea42c3))
+* **tofs:** move “files_switch” macro to “libtofs.jinja” ([da7e692](https://github.com/dafyddj/tmp-test-template-formula/commit/da7e69283ff72425e0b7746f114a0ed46246d861))
+
+
+### Features
+
+* add Gentoo support ([4c2f4ed](https://github.com/dafyddj/tmp-test-template-formula/commit/4c2f4ede0223e83e1958be33288fa6b83cce7140))
+* add script to ease conversion from template to real formula ([edfa269](https://github.com/dafyddj/tmp-test-template-formula/commit/edfa269e9655407ca26788a8d5564c759abbbb30))
+* **authors:** update automatically alongside `semantic-release` ([8000098](https://github.com/dafyddj/tmp-test-template-formula/commit/80000982e2e94df1bf6c23f913b6fe3f34e8e23a))
+* **centos-6:** reshape formula and tests for this platform ([a4b1608](https://github.com/dafyddj/tmp-test-template-formula/commit/a4b1608ab4c227cf9fe6ceed1e2bae20a42c92cf)), closes [#104](https://github.com/dafyddj/tmp-test-template-formula/issues/104)
+* **convert-formula.sh:** assign `@NONE` as whole-formula owner ([cceffff](https://github.com/dafyddj/tmp-test-template-formula/commit/cceffffef5924b6c156890562e6f64f4872d6867))
+* **kitchen+travis:** add `opensuse-leap` after resolving issues ([7614a3c](https://github.com/dafyddj/tmp-test-template-formula/commit/7614a3cd7d199969496025aa0129bb6e142af7a4))
+* **kitchen+travis:** conduct tests on a wider range of platforms ([1348078](https://github.com/dafyddj/tmp-test-template-formula/commit/1348078395dbff459a37a7cccc9d0eeb99562574))
+* **m2r:** use `m2r` to convert automatic `.md` files to `.rst` ([b86ddf4](https://github.com/dafyddj/tmp-test-template-formula/commit/b86ddf4ce70c82e24860298ef33bddc91cf2f422))
+* **macos:** basic package and group handling ([8c3fe22](https://github.com/dafyddj/tmp-test-template-formula/commit/8c3fe22822c5bef5cad29b0e813c91507253050a))
+* **map:** generate a YAML file to validate `map.jinja` ([fc90075](https://github.com/dafyddj/tmp-test-template-formula/commit/fc90075dd94d874eb283d96259f552812d8a8d82))
+* **mapping:** introduce osarchmap per issue [#13](https://github.com/dafyddj/tmp-test-template-formula/issues/13) ([41ac40d](https://github.com/dafyddj/tmp-test-template-formula/commit/41ac40d958fa3744e4908bc25be1cd27b0275e0f))
+* **map:** update to v5 `map.jinja` ([42e1932](https://github.com/dafyddj/tmp-test-template-formula/commit/42e19322c9c4d91a6cfa1e406723b5a799f33f80))
+* **pkg:** add `clean` states ([422c7ac](https://github.com/dafyddj/tmp-test-template-formula/commit/422c7ac212e4bb0f01a8ce0f0482bf6d92a34438))
+* **pkg:** use `require` requisite between `pkg` states ([6e7141b](https://github.com/dafyddj/tmp-test-template-formula/commit/6e7141babf2eaf8bfbbe089675f50420ccebe7c7))
+* **rtd:** provide custom CSS file for overriding in-use Sphinx theme ([24bd338](https://github.com/dafyddj/tmp-test-template-formula/commit/24bd3383346a907b0e08ef4ec17b53ad232e0a0e))
+* **semantic-release:** configure for this formula ([cbcfd75](https://github.com/dafyddj/tmp-test-template-formula/commit/cbcfd75b31f1df9a9f4cdaf931d070dc59b2f1c6))
+* **sub-component:** manage a dedicated configuration file ([c4440d7](https://github.com/dafyddj/tmp-test-template-formula/commit/c4440d7c55480e10c2330d0a7d760a22f71b805b))
+* **toc:** use `markdown-toc` directly to update inline ([a5bae1e](https://github.com/dafyddj/tmp-test-template-formula/commit/a5bae1efe0066881e153cc060c1198e1c76d0eed))
+* **tofs:** implement backwards-compatible TOFSv2 for configurability ([068a94d](https://github.com/dafyddj/tmp-test-template-formula/commit/068a94d3a242ec818640205626b011f8e53acf1a))
+* **tofs:** lookup files directory in “tpldir” hierarchy ([5c495fb](https://github.com/dafyddj/tmp-test-template-formula/commit/5c495fb63a128527baf58745b5e0ce981b331f69))
+* **yamllint:** include for this repo and apply rules throughout ([e76525f](https://github.com/dafyddj/tmp-test-template-formula/commit/e76525f130650308b2f9bd859b0e57f8e230b8fc))
+
+
+### Performance Improvements
+
+* **travis:** improve `salt-lint` invocation [skip ci] ([7a96cd7](https://github.com/dafyddj/tmp-test-template-formula/commit/7a96cd77db71eb8b022df7bd5c1014664124a022))
+
+
+### Reverts
+
+* **kitchen+travis:** disable `debian-8` due to `2019.2` bug ([e8f0f7e](https://github.com/dafyddj/tmp-test-template-formula/commit/e8f0f7ee2ac20e90382c55e751bc5488b4262204))
+* **kitchen+travis:** use `debian:jessie-backports` as `debian-8` ([dcd141a](https://github.com/dafyddj/tmp-test-template-formula/commit/dcd141af749b580659b66e42e41d9c97b7903b36))
+
+
+### BREAKING CHANGES
+
+* **map:** `map.jinja` now exports a generic `mapdata` variable
+* **map:** The per grain parameter values are now under `TEMPLATE/parameters/`
+* changed all state names and ids
+* **pkgname:** the parameter `pkg` is now a dictionary. References
+ to `template.pkg` should be changed to `template.pkg.name`.
+* **tofs:** every formula writer will need to change the import
+to use this new version.
+
+* template/libtofs.jinja: provides the “files_switch” macro.
+
+* docs/TOFS_pattern.rst: update documentation to use the new path.
+
+* template/config/clean.sls: change import from “macros.jinja” to “libtofs.jinja”.
+
+* template/config/file.sls: ditoo.
+* **states:** Wholesale state ID changes will break implementations
+that are relying on the previous state IDs for requisite purposes.
+* **pkg:** Changing the `pkg` directory to `package` will break
+implementations that are depending on `pkg` for `include` or `sls`-based
+requisite purposes.
+
 ## [5.0.22](https://github.com/saltstack-formulas/template-formula/compare/v5.0.21...v5.0.22) (2025-06-24)
 
 
