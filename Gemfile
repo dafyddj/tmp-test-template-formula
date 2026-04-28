@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# renovate: chef-workstation 25.9.1094
+# renovate: chef-workstation 25.13.7
 
 source ENV.fetch('PROXY_RUBYGEMSORG', 'https://rubygems.org')
 
