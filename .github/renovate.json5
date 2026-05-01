@@ -1,11 +1,5 @@
 {
   $schema: 'https://docs.renovatebot.com/renovate-schema.json',
-  enabledManagers: [
-    'github-actions',
-    'gitlabci',
-    'pre-commit',
-    'custom.regex',
-  ],
   extends: [
     'github>saltstack-formulas/.github',
     'github>saltstack-formulas/.github:automerge-for-formulas',
@@ -14,6 +8,7 @@
     'github>saltstack-formulas/.github:update-gitlab-ci',
     'github>saltstack-formulas/.github:update-pre-commit',
     ':prHourlyLimit4',
+    ':maintainLockFilesWeekly',
   ],
   schedule: [
     '* 0-5 * * 2',        // Tuesdays before 6AM only
