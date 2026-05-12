@@ -24,4 +24,4 @@ gem 'kitchen-salt', '0.7.2'
 
 gem 'net-ssh', '7.3.0'
 
-gem 'test-kitchen', '3.9.1'
+gem 'test-kitchen', '4.0.0'
