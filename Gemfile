@@ -22,6 +22,6 @@ gem 'kitchen-docker', git: 'https://github.com/test-kitchen/kitchen-docker', ref
 gem 'kitchen-inspec', '3.1.0'
 gem 'kitchen-salt', '0.7.2'
 
-gem 'net-ssh', '7.3.0'
+gem 'net-ssh', '7.3.3'
 
 gem 'test-kitchen', '3.9.1'
